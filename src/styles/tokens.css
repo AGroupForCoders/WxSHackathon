@@ -1,6 +1,41 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* hmm if we're gonna fully theme this thing we're gonna need to token each gradient and blob haha */
+
+  /* Background Tokens */
+  --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+  --color-background-muted: var(--background-muted);
+
+  /* Foreground/Text Tokens */
+  --color-foreground: var(--foreground: );
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+
+  /* Border Tokens */
+  --color-border: var(--border);
+  --color-border-muted: var(--border-muted);
+
+  /* Interactive States */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+
+  /* Feedback Colors */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+
+  /* Optional: Secondary Accent */
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--seconday-hover);
+
+  /* Focus States */
+  --color-focus: var(--focus);
+  --color-focus-subtle: var(--focus-subtle);
+
   /* WDCC Blue Colors */
   --color-wdcc-blue-02: oklch(98.5% 0.01 240);
   --color-wdcc-blue-05: oklch(96.2% 0.02 240);
@@ -80,9 +115,7 @@
   --color-gray-90: oklch(15.5% 0 0);
 
   /* Semantic Color Tokens */
-  --color-text-primary: var(--color-gray-80);
-  --color-text-lighter: var(--color-gray-60);
-  --color-text-lightest: var(--color-gray-30);
+
   --color-accent-wdcc: var(--color-wdcc-blue-50);
   --color-accent-sesa: var(--color-sesa-teal-50);
   --color-accent-apricot: var(--color-abbey-apricot-30);
