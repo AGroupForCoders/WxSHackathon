@@ -1,5 +1,2 @@
+@import "./tokens.css";
 @import "tailwindcss";
-
-@theme {
-    
-}

@@ -1,5 +1,3 @@
 export default function Home() {
-  return (
-   <div>agfc goated</div>
-  );
+  return <div className="bg-wdcc-blue-02">agfc goated</div>;
 }
