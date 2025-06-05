@@ -1,0 +1,20 @@
+
+@utility responsive-body {
+    /* 3 cols: empty_content_empty */
+    @apply grid grid-cols-[auto_clamp(300px,80%,1100px)_auto];
+
+    & > * {
+        /* Constrain children of main to middle column */
+        @apply col-start-2 col-end-3;
+    }
+}
+
+
+@utility responsive-fullwidth {
+    /* Escape hatch to allow full-width 'breaking out' of the responsive-body grid layout */
+    @apply col-start-1 col-end-4;
+}
+
+@utility responsive-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+}

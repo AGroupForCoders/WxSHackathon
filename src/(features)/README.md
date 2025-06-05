@@ -1,0 +1,54 @@
+Holy moly i have no idea what im doing with  Vertical Slice Architecture (VSA). something like?
+/app
+  /(marketing)
+    /about
+    /contact
+  /dashboard
+    /[userId]
+      /settings
+      /page.tsx
+  /layout.tsx
+  /page.tsx
+
+/src
+  /features
+    /auth
+      /components
+        LoginForm.tsx
+        AuthGuard.tsx
+      /routes
+        /login
+          page.tsx
+      /hooks
+        useAuth.ts
+      /services
+        authService.ts
+      /types.ts
+      /schemas.ts
+    /activities
+      /components
+        ActivityList.tsx
+        ActivityForm.tsx
+      /routes
+        /dashboard
+          /activities
+            page.tsx
+      /hooks
+        useActivities.ts
+      /services
+        activityService.ts
+      /types.ts
+      /schemas.ts
+    /notifications
+      /services
+        discordNotifier.ts
+  /lib
+    tailwind/tokens.ts
+    drizzle/db.ts
+    utils.ts
+  /config
+    env.ts
+    next-auth.ts
+  /styles
+    globals.css
+    tailwind.config.ts
