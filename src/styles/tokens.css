@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* hmm if we're gonna fully theme this thing we're gonna need to token each gradient and blob haha */
+
+  /* Background Tokens */
+  --color-background: var(--background);
+  --color-background-subtle: var(--background-subtle);
+  --color-background-muted: var(--background-muted);
+
+  /* Foreground/Text Tokens */
+  --color-foreground: var(--foreground: );
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+
+  /* Border Tokens */
+  --color-border: var(--border);
+  --color-border-muted: var(--border-muted);
+
+  /* Interactive States */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+
+  /* Feedback Colors */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+
+  /* Optional: Secondary Accent */
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--seconday-hover);
+
+  /* Focus States */
+  --color-focus: var(--focus);
+  --color-focus-subtle: var(--focus-subtle);
+
+  /* WDCC Blue Colors */
+  --color-wdcc-blue-02: oklch(98.5% 0.01 240);
+  --color-wdcc-blue-05: oklch(96.2% 0.02 240);
+  --color-wdcc-blue-10: oklch(92.8% 0.04 240);
+  --color-wdcc-blue-20: oklch(85.3% 0.08 240);
+  --color-wdcc-blue-30: oklch(77.9% 0.12 240);
+  --color-wdcc-blue-40: oklch(70.4% 0.16 240);
+  --color-wdcc-blue-50: oklch(62.8% 0.2 240);
+  --color-wdcc-blue-60: oklch(55.3% 0.16 240);
+  --color-wdcc-blue-70: oklch(42.6% 0.12 240);
+  --color-wdcc-blue-80: oklch(29.9% 0.08 240);
+  --color-wdcc-blue-90: oklch(17.2% 0.04 240);
+
+  /* SESA Teal Colors */
+  --color-sesa-teal-02: oklch(98.7% 0.01 180);
+  --color-sesa-teal-05: oklch(97.1% 0.02 180);
+  --color-sesa-teal-10: oklch(94.6% 0.04 180);
+  --color-sesa-teal-20: oklch(89.2% 0.08 180);
+  --color-sesa-teal-30: oklch(83.8% 0.12 180);
+  --color-sesa-teal-40: oklch(78.4% 0.16 180);
+  --color-sesa-teal-50: oklch(73% 0.2 180);
+  --color-sesa-teal-60: oklch(64.2% 0.16 180);
+  --color-sesa-teal-70: oklch(50.8% 0.12 180);
+  --color-sesa-teal-80: oklch(37.4% 0.08 180);
+  --color-sesa-teal-90: oklch(24% 0.04 180);
+
+  /* Abbey Apricot Colors */
+  --color-abbey-apricot-02: oklch(98.9% 0.01 60);
+  --color-abbey-apricot-05: oklch(97.4% 0.02 60);
+  --color-abbey-apricot-10: oklch(94.7% 0.04 60);
+  --color-abbey-apricot-20: oklch(89.5% 0.08 60);
+  --color-abbey-apricot-30: oklch(84.2% 0.12 60);
+  --color-abbey-apricot-40: oklch(78.9% 0.16 60);
+  --color-abbey-apricot-50: oklch(73.6% 0.2 60);
+  --color-abbey-apricot-60: oklch(66.1% 0.16 60);
+  --color-abbey-apricot-70: oklch(53.7% 0.12 60);
+  --color-abbey-apricot-80: oklch(41.3% 0.08 60);
+  --color-abbey-apricot-90: oklch(28.9% 0.04 60);
+
+  /* Yoyo Yellow Colors */
+  --color-yoyo-yellow-02: oklch(98.8% 0.01 90);
+  --color-yoyo-yellow-05: oklch(97.6% 0.02 90);
+  --color-yoyo-yellow-10: oklch(95.1% 0.04 90);
+  --color-yoyo-yellow-20: oklch(90.2% 0.08 90);
+  --color-yoyo-yellow-30: oklch(85.3% 0.12 90);
+  --color-yoyo-yellow-40: oklch(80.4% 0.16 90);
+  --color-yoyo-yellow-50: oklch(75.5% 0.2 90);
+  --color-yoyo-yellow-60: oklch(67.9% 0.16 90);
+  --color-yoyo-yellow-70: oklch(55.4% 0.12 90);
+  --color-yoyo-yellow-80: oklch(42.9% 0.08 90);
+  --color-yoyo-yellow-90: oklch(30.4% 0.04 90);
+
+  /* Andrew Amethyst Colors */
+  --color-andrew-amethyst-02: oklch(98.1% 0.01 300);
+  --color-andrew-amethyst-05: oklch(96.5% 0.02 300);
+  --color-andrew-amethyst-10: oklch(93% 0.04 300);
+  --color-andrew-amethyst-20: oklch(86% 0.08 300);
+  --color-andrew-amethyst-30: oklch(79% 0.12 300);
+  --color-andrew-amethyst-40: oklch(72% 0.16 300);
+  --color-andrew-amethyst-50: oklch(65% 0.2 300);
+  --color-andrew-amethyst-60: oklch(56.5% 0.16 300);
+  --color-andrew-amethyst-70: oklch(43.5% 0.12 300);
+  --color-andrew-amethyst-80: oklch(30.5% 0.08 300);
+  --color-andrew-amethyst-90: oklch(17.5% 0.04 300);
+
+  /* Gray Colors */
+  --color-gray-02: oklch(98% 0 0);
+  --color-gray-05: oklch(96% 0 0);
+  --color-gray-10: oklch(91.5% 0 0);
+  --color-gray-20: oklch(82% 0 0);
+  --color-gray-30: oklch(72.5% 0 0);
+  --color-gray-40: oklch(63% 0 0);
+  --color-gray-50: oklch(53.5% 0 0);
+  --color-gray-60: oklch(44% 0 0);
+  --color-gray-70: oklch(34.5% 0 0);
+  --color-gray-80: oklch(25% 0 0);
+  --color-gray-90: oklch(15.5% 0 0);
+
+  /* Semantic Color Tokens */
+
+  --color-accent-wdcc: var(--color-wdcc-blue-50);
+  --color-accent-sesa: var(--color-sesa-teal-50);
+  --color-accent-apricot: var(--color-abbey-apricot-30);
+  --color-accent-yellow: var(--color-yoyo-yellow-50);
+  --color-accent-amethyst: var(--color-andrew-amethyst-50);
+}

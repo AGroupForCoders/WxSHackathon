@@ -1,0 +1,65 @@
+name: Check Next.js Build
+
+on:
+  # run on push to any branch except main
+  push:
+    branches:
+      - '*'
+      - '!main'
+  # run on pull request events
+  pull_request:
+    types: [opened, reopened]
+  # allow manual triggers
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DRIZZLE_DATABASE_URL: ${{ secrets.DRIZZLE_DATABASE_URL }}
+      APP_URL: ${{ secrets.APP_URL }}
+
+    steps:
+      # checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # print environment variables in build, this project doesn't need security anyways :D
+      - name: Echo environment variables
+        run: |
+          echo "DRIZZLE_DATABASE_URL: $DRIZZLE_DATABASE_URL"
+          echo "APP_URL: $APP_URL"
+          
+      # set-up pnpm https://github.com/pnpm/action-setup
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      # set-up node
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      # cache dependencies
+      - name: Cache pnpm dependencies
+        uses: actions/cache@v3
+        with:
+          # pnpm stores dependencies in a 'node_modules/.pnpm' folder
+          path: |
+            ~/.pnpm-store
+            node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # install dependencies using pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # build the application
+      - name: Build Next.js project
+        run: pnpm run build
+
