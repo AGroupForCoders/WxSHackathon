@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import "@/styles/globals.css";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,8 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased bg-background`}>{children}</body>
+    <html lang="en" >
+      <head>
+        {/* Tbh idk how to get Adobe Fonts to work in app-router, so this is a janky <head> workaround */}
+        <link rel="stylesheet" href="https://use.typekit.net/inx8qlb.css"/>
+      </head>
+      <body className={`antialiased bg-background global-font-stack`}>{children}</body>
     </html>
   );
 }

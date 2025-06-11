@@ -18,3 +18,7 @@
 @utility responsive-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
 }
+
+@utility global-font-stack{
+    font-family: "Greycliff CF", sans-serif;
+}
