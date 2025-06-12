@@ -1,4 +1,3 @@
-import RootLayout from "../layout";
 import {Button} from "@/components/primitives/Button";
 
 export default function Testing() {

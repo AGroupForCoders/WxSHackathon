@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div className="">agfc goated</div>;
+  return(
+    <main className="min-h-screen">
+      asdasdasd
+    </main>
+  )
 }
