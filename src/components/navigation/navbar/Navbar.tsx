@@ -21,7 +21,7 @@ export default function Navbar(){
         <Link href="/organisers" className={navLinkStyles}>Organisers</Link>
       </div>
       <div>
-        <Button variant={{style: "secondary"}} href="https://www.youtube.com/watch?v=p7YXXieghto">Registration -></Button>
+        <Button variant={{style: "secondary"}} href="https://www.youtube.com/watch?v=p7YXXieghto">Registration {"->"}</Button>
       </div>
     </nav>
   )
