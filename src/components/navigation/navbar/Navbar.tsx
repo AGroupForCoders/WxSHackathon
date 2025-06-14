@@ -6,7 +6,7 @@ export default function Navbar(){
   const navLinkStyles = "font-semibold transition hover:opacity-50"
 
   return(
-    <nav className="py-4 px-32 flex justify-between">
+    <nav className="py-4 px-32 flex justify-between absolute top-0 w-full">
       <div className="flex gap-8 items-center">
         <Link href="/" className="bg-accent-wdcc h-full w-[45px] rounded-full grid place-items-center">
           {/* PLACEHOLDER FOR LOGO OF SOME KIND */}
