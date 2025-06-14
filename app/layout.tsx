@@ -20,7 +20,7 @@ export default function RootLayout({
         {/* Tbh idk how to get Adobe Fonts to work in app-router, so this is a janky <head> workaround */}
         <link rel="stylesheet" href="https://use.typekit.net/inx8qlb.css"/>
       </head>
-      <body className={`antialiased bg-background global-font-stack tracking-[-0.01em]`}>
+      <body className={`antialiased bg-background text-foreground global-font-stack tracking-[-0.01em]`}>
         <Navbar />
         {children}
         <Footer />
