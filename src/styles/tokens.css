@@ -9,9 +9,9 @@
   --color-background-muted: var(--background-muted);
 
   /* Foreground/Text Tokens */
-  --color-foreground: var(--foreground: );
-  --color-foreground-muted: var(--foreground-muted);
-  --color-foreground-subtle: var(--foreground-subtle);
+  --color-foreground: var(--color-text-primary);
+  --color-foreground-muted: var(--color-text-lighter);
+  --color-foreground-subtle: var(--color-text-lightest);
 
   /* Border Tokens */
   --color-border: var(--border);
@@ -37,88 +37,92 @@
   --color-focus-subtle: var(--focus-subtle);
 
   /* WDCC Blue Colors */
-  --color-wdcc-blue-02: oklch(98.5% 0.01 240);
-  --color-wdcc-blue-05: oklch(96.2% 0.02 240);
-  --color-wdcc-blue-10: oklch(92.8% 0.04 240);
-  --color-wdcc-blue-20: oklch(85.3% 0.08 240);
-  --color-wdcc-blue-30: oklch(77.9% 0.12 240);
-  --color-wdcc-blue-40: oklch(70.4% 0.16 240);
-  --color-wdcc-blue-50: oklch(62.8% 0.2 240);
-  --color-wdcc-blue-60: oklch(55.3% 0.16 240);
-  --color-wdcc-blue-70: oklch(42.6% 0.12 240);
-  --color-wdcc-blue-80: oklch(29.9% 0.08 240);
-  --color-wdcc-blue-90: oklch(17.2% 0.04 240);
+  --color-wdcc-blue-02: oklch(0.983 0.009 247.912);
+  --color-wdcc-blue-05: oklch(0.956 0.021 248.044);
+  --color-wdcc-blue-10: oklch(0.914 0.041 247.125);
+  --color-wdcc-blue-20: oklch(0.829 0.085 248.883);
+  --color-wdcc-blue-30: oklch(0.749 0.126 249.538);
+  --color-wdcc-blue-40: oklch(0.673 0.166 251.761);
+  --color-wdcc-blue-50: oklch(0.61 0.2 255.347);
+  --color-wdcc-blue-60: oklch(0.517 0.167 255.089);
+  --color-wdcc-blue-70: oklch(0.424 0.133 254.371);
+  --color-wdcc-blue-80: oklch(0.322 0.097 253.571);
+  --color-wdcc-blue-90: oklch(0.213 0.055 249.422);
 
   /* SESA Teal Colors */
-  --color-sesa-teal-02: oklch(98.7% 0.01 180);
-  --color-sesa-teal-05: oklch(97.1% 0.02 180);
-  --color-sesa-teal-10: oklch(94.6% 0.04 180);
-  --color-sesa-teal-20: oklch(89.2% 0.08 180);
-  --color-sesa-teal-30: oklch(83.8% 0.12 180);
-  --color-sesa-teal-40: oklch(78.4% 0.16 180);
-  --color-sesa-teal-50: oklch(73% 0.2 180);
-  --color-sesa-teal-60: oklch(64.2% 0.16 180);
-  --color-sesa-teal-70: oklch(50.8% 0.12 180);
-  --color-sesa-teal-80: oklch(37.4% 0.08 180);
-  --color-sesa-teal-90: oklch(24% 0.04 180);
+  --color-sesa-teal-02: oklch(0.987 0.005 183.033);
+  --color-sesa-teal-05: oklch(0.97 0.012 178.025);
+  --color-sesa-teal-10: oklch(0.94 0.025 178.362);
+  --color-sesa-teal-20: oklch(0.879 0.048 178.203);
+  --color-sesa-teal-30: oklch(0.82 0.073 175.762);
+  --color-sesa-teal-40: oklch(0.764 0.094 174.368);
+  --color-sesa-teal-50: oklch(0.708 0.11 172.836);
+  --color-sesa-teal-60: oklch(0.602 0.093 172.506);
+  --color-sesa-teal-70: oklch(0.49 0.074 172.639);
+  --color-sesa-teal-80: oklch(0.371 0.053 174.491);
+  --color-sesa-teal-90: oklch(0.243 0.032 174.437);
 
   /* Abbey Apricot Colors */
-  --color-abbey-apricot-02: oklch(98.9% 0.01 60);
-  --color-abbey-apricot-05: oklch(97.4% 0.02 60);
-  --color-abbey-apricot-10: oklch(94.7% 0.04 60);
-  --color-abbey-apricot-20: oklch(89.5% 0.08 60);
-  --color-abbey-apricot-30: oklch(84.2% 0.12 60);
-  --color-abbey-apricot-40: oklch(78.9% 0.16 60);
-  --color-abbey-apricot-50: oklch(73.6% 0.2 60);
-  --color-abbey-apricot-60: oklch(66.1% 0.16 60);
-  --color-abbey-apricot-70: oklch(53.7% 0.12 60);
-  --color-abbey-apricot-80: oklch(41.3% 0.08 60);
-  --color-abbey-apricot-90: oklch(28.9% 0.04 60);
+  --color-abbey-apricot-02: oklch(0.988 0.009 67.727);
+  --color-abbey-apricot-05: oklch(0.968 0.022 67.561);
+  --color-abbey-apricot-10: oklch(0.939 0.044 68.351);
+  --color-abbey-apricot-20: oklch(0.878 0.088 66.27);
+  --color-abbey-apricot-30: oklch(0.816 0.117 65.321);
+  --color-abbey-apricot-40: oklch(0.762 0.151 61.586);
+  --color-abbey-apricot-50: oklch(0.714 0.173 55.434);
+  --color-abbey-apricot-60: oklch(0.613 0.151 54.508);
+  --color-abbey-apricot-70: oklch(0.505 0.125 54.947);
+  --color-abbey-apricot-80: oklch(0.38 0.092 56.795);
+  --color-abbey-apricot-90: oklch(0.247 0.056 63.84);
 
   /* Yoyo Yellow Colors */
-  --color-yoyo-yellow-02: oklch(98.8% 0.01 90);
-  --color-yoyo-yellow-05: oklch(97.6% 0.02 90);
-  --color-yoyo-yellow-10: oklch(95.1% 0.04 90);
-  --color-yoyo-yellow-20: oklch(90.2% 0.08 90);
-  --color-yoyo-yellow-30: oklch(85.3% 0.12 90);
-  --color-yoyo-yellow-40: oklch(80.4% 0.16 90);
-  --color-yoyo-yellow-50: oklch(75.5% 0.2 90);
-  --color-yoyo-yellow-60: oklch(67.9% 0.16 90);
-  --color-yoyo-yellow-70: oklch(55.4% 0.12 90);
-  --color-yoyo-yellow-80: oklch(42.9% 0.08 90);
-  --color-yoyo-yellow-90: oklch(30.4% 0.04 90);
+  --color-yoyo-yellow-02: oklch(0.991 0.01 87.47);
+  --color-yoyo-yellow-05: oklch(0.981 0.027 93.097);
+  --color-yoyo-yellow-10: oklch(0.962 0.051 91.371);
+  --color-yoyo-yellow-20: oklch(0.928 0.1 92.145);
+  --color-yoyo-yellow-30: oklch(0.896 0.139 91.07);
+  --color-yoyo-yellow-40: oklch(0.869 0.165 89.196);
+  --color-yoyo-yellow-50: oklch(0.842 0.173 84.575);
+  --color-yoyo-yellow-60: oklch(0.714 0.146 85.224);
+  --color-yoyo-yellow-70: oklch(0.577 0.118 85.466);
+  --color-yoyo-yellow-80: oklch(0.435 0.089 87.056);
+  --color-yoyo-yellow-90: oklch(0.276 0.056 89.069);
 
   /* Andrew Amethyst Colors */
-  --color-andrew-amethyst-02: oklch(98.1% 0.01 300);
-  --color-andrew-amethyst-05: oklch(96.5% 0.02 300);
-  --color-andrew-amethyst-10: oklch(93% 0.04 300);
-  --color-andrew-amethyst-20: oklch(86% 0.08 300);
-  --color-andrew-amethyst-30: oklch(79% 0.12 300);
-  --color-andrew-amethyst-40: oklch(72% 0.16 300);
-  --color-andrew-amethyst-50: oklch(65% 0.2 300);
-  --color-andrew-amethyst-60: oklch(56.5% 0.16 300);
-  --color-andrew-amethyst-70: oklch(43.5% 0.12 300);
-  --color-andrew-amethyst-80: oklch(30.5% 0.08 300);
-  --color-andrew-amethyst-90: oklch(17.5% 0.04 300);
+  --color-andrew-amethyst-02: oklch(0.978 0.011 308.332);
+  --color-andrew-amethyst-05: oklch(0.947 0.027 307.056);
+  --color-andrew-amethyst-10: oklch(0.891 0.056 307.215);
+  --color-andrew-amethyst-20: oklch(0.786 0.113 306.841);
+  --color-andrew-amethyst-30: oklch(0.682 0.171 305.194);
+  --color-andrew-amethyst-40: oklch(0.587 0.223 303.019);
+  --color-andrew-amethyst-50: oklch(0.51 0.254 298.697);
+  --color-andrew-amethyst-60: oklch(0.436 0.215 299.119);
+  --color-andrew-amethyst-70: oklch(0.356 0.171 299.429);
+  --color-andrew-amethyst-80: oklch(0.274 0.125 300.757);
+  --color-andrew-amethyst-90: oklch(0.183 0.075 301.961);
 
   /* Gray Colors */
-  --color-gray-02: oklch(98% 0 0);
-  --color-gray-05: oklch(96% 0 0);
-  --color-gray-10: oklch(91.5% 0 0);
-  --color-gray-20: oklch(82% 0 0);
-  --color-gray-30: oklch(72.5% 0 0);
-  --color-gray-40: oklch(63% 0 0);
-  --color-gray-50: oklch(53.5% 0 0);
-  --color-gray-60: oklch(44% 0 0);
-  --color-gray-70: oklch(34.5% 0 0);
-  --color-gray-80: oklch(25% 0 0);
-  --color-gray-90: oklch(15.5% 0 0);
+  --color-gray-02: oklch(0.985 0 89.876);
+  --color-gray-05: oklch(0.961 0.001 286.375);
+  --color-gray-10: oklch(0.92 0.004 286.32);
+  --color-gray-20: oklch(0.838 0.008 293.881);
+  --color-gray-30: oklch(0.756 0.01 286.161);
+  --color-gray-40: oklch(0.671 0.015 290.6);
+  --color-gray-50: oklch(0.581 0.02 289.305);
+  --color-gray-60: oklch(0.497 0.016 290.408);
+  --color-gray-70: oklch(0.408 0.012 285.875);
+  --color-gray-80: oklch(0.313 0.011 293.423);
+  --color-gray-90: oklch(0.21 0.006 285.885);
 
   /* Semantic Color Tokens */
-
   --color-accent-wdcc: var(--color-wdcc-blue-50);
   --color-accent-sesa: var(--color-sesa-teal-50);
   --color-accent-apricot: var(--color-abbey-apricot-30);
   --color-accent-yellow: var(--color-yoyo-yellow-50);
   --color-accent-amethyst: var(--color-andrew-amethyst-50);
+
+  --color-text-primary: var(--color-gray-80);
+  --color-text-lighter: var(--color-gray-60);
+  --color-text-lightest: var(--color-gray-30);
+
 }

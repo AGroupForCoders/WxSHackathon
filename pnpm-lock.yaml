@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@rive-app/react-canvas':
+        specifier: ^4.21.3
+        version: 4.21.3(react@19.1.0)
       animejs:
         specifier: ^4.0.2
         version: 4.0.2
@@ -26,6 +29,9 @@ importers:
       tailwind-merge:
         specifier: ^3.3.0
         version: 3.3.0
+      tailwind-variants:
+        specifier: ^1.0.0
+        version: 1.0.0(tailwindcss@4.1.8)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3.3.1
@@ -342,6 +348,14 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
+
+  '@rive-app/canvas@2.29.3':
+    resolution: {integrity: sha512-tZrKAEMdmjg5ipAAVoOe/CqW9Y+zW/gqZBvFTmWszJGaXbW6wt+hRPkTuHIlpNMLA6oFe57t/5xHsxLoXTq8mA==}
+
+  '@rive-app/react-canvas@4.21.3':
+    resolution: {integrity: sha512-DUCVwOF4gX7ZeMmESEu3B2LDeHvkw925mPXqq89tA6aybhwsxZchUktHp0jM6WsI2TAFjNgPSylOgIsa9gSavA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -1711,8 +1725,17 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  tailwind-merge@3.0.2:
+    resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
+
   tailwind-merge@3.3.0:
     resolution: {integrity: sha512-fyW/pEfcQSiigd5SNn0nApUOxx0zB/dm6UDU/rEwc2c3sX2smWUNbapHv+QRqLGVp9GWX3THIa7MUGPo+YkDzQ==}
+
+  tailwind-variants@1.0.0:
+    resolution: {integrity: sha512-2WSbv4ulEEyuBKomOunut65D8UZwxrHoRfYnxGcQNnHqlSCp2+B7Yz2W+yrNDrxRodOXtGD/1oCcKGNBnUqMqA==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
 
   tailwindcss@4.1.8:
     resolution: {integrity: sha512-kjeW8gjdxasbmFKpVGrGd5T4i40mV5J2Rasw48QARfYeQ8YS9x02ON9SFWax3Qf616rt4Cp3nVNIj6Hd1mP3og==}
@@ -2050,6 +2073,13 @@ snapshots:
       fastq: 1.19.1
 
   '@nolyfill/is-core-module@1.0.39': {}
+
+  '@rive-app/canvas@2.29.3': {}
+
+  '@rive-app/react-canvas@4.21.3(react@19.1.0)':
+    dependencies:
+      '@rive-app/canvas': 2.29.3
+      react: 19.1.0
 
   '@rtsao/scc@1.1.0': {}
 
@@ -3633,7 +3663,14 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+  tailwind-merge@3.0.2: {}
+
   tailwind-merge@3.3.0: {}
+
+  tailwind-variants@1.0.0(tailwindcss@4.1.8):
+    dependencies:
+      tailwind-merge: 3.0.2
+      tailwindcss: 4.1.8
 
   tailwindcss@4.1.8: {}
 

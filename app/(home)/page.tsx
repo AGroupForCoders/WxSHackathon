@@ -1,3 +1,12 @@
+import Hero from "./_components/Hero";
+
 export default function Home() {
-  return <div className="">agfc goated</div>;
+  return(
+    <main className="min-h-screen">
+      <Hero/>
+      <div className="h-128">
+        Placeholder spacing
+      </div>
+    </main>
+  )
 }
