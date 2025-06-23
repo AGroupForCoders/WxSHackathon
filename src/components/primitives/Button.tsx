@@ -6,7 +6,7 @@ import { type VariantProps, tv } from "tailwind-variants";
 import { cn } from "@/utils/cn";
 
 const button = tv({
-  base: "flex items-center justify-center gap-2 rounded-full px-6 py-2 font-semibold whitespace-nowrap transition duration-200 hover:cursor-pointer",
+  base: "flex items-center justify-center gap-2 rounded-full px-6 py-2 font-semibold whitespace-nowrap transition duration-200 hover:cursor-pointer transition",
   variants: {
     /* Realistically we probably don't need to codify the whole style/color variant split since there's so few buttons and basically no variants, but whatever.  */
     style: {
@@ -14,7 +14,9 @@ const button = tv({
       secondary: "border-2",
     },
     color: {
-      primary: "",
+      primary: "border-wdcc-blue-10 bg-linear-to-br text-wdcc-blue-70 hover:border-wdcc-blue-20",
+      wdcc: "border-wdcc-blue-20 hover:border-wdcc-blue-30",
+      sesa: "border-sesa-teal-20 hover:border-sesa-teal-30",
     },
     width: {
       full: "w-full",
@@ -30,12 +32,32 @@ const button = tv({
     {
       style: "primary",
       color: "primary",
-      class: "border-wdcc-blue-10 bg-linear-to-br from-wdcc-blue-10 to-sesa-teal-10 text-wdcc-blue-70 transition hover:from-wdcc-blue-20 hover:border-wdcc-blue-20",
+      class: "from-wdcc-blue-10 to-sesa-teal-10 hover:from-wdcc-blue-20",
     },
     {
       style: "secondary",
       color: "primary",
-      class: "border-wdcc-blue-10 bg-linear-to-br from-wdcc-blue-05 to-sesa-teal-05 text-wdcc-blue-70 hover:bg-yellow-200 transition hover:from-wdcc-blue-10 hover:border-wdcc-blue-20",
+      class: "from-wdcc-blue-05 to-sesa-teal-05 hover:bg-yellow-200  hover:from-wdcc-blue-10",
+    },
+    {
+      style: "primary",
+      color: "wdcc",
+      class: "bg-accent-wdcc text-white hover:bg-wdcc-blue-60",
+    },
+    {
+      style: "secondary",
+      color: "wdcc",
+      class: "bg-wdcc-blue-10 text-wdcc-blue-70 hover:bg-wdcc-blue-20",
+    },
+    {
+      style: "primary",
+      color: "sesa",
+      class: "bg-accent-sesa text-white hover:bg-sesa-teal-60",
+    },
+    {
+      style: "secondary",
+      color: "sesa",
+      class: "bg-sesa-teal-10 text-sesa-teal-70 hover:bg-sesa-teal-20",
     },
   ],
 });
