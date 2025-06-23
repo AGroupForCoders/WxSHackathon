@@ -20,5 +20,5 @@
 }
 
 @utility global-font-stack{
-    font-family: "Greycliff CF", sans-serif;
+    font-family: "greycliff-cf", "Greycliff CF", sans-serif;
 }
