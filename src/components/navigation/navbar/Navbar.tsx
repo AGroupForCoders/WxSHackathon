@@ -14,9 +14,9 @@ export default function Navbar(){
           <span className="text-white text-xs">logo?</span>
         </Link>
         <div className="hidden md:flex gap-8 items-center">
-          <Link href="/" className={navLinkStyles}>About</Link>
-          <Link href="/" className={navLinkStyles}>Sponsors</Link>
-          <Link href="/" className={navLinkStyles}>FAQ</Link>
+          <Link href="/" className={`${navLinkStyles} hidden lg:inline`}>About</Link>
+          <Link href="/" className={`${navLinkStyles} hidden lg:inline`}>Sponsors</Link>
+          <Link href="/" className={`${navLinkStyles} hidden lg:inline`}>FAQ</Link>
           <Link href="/gallery" className={navLinkStyles}>Gallery</Link>
           <Link href="/themes" className={navLinkStyles}>Past themes</Link>
           <Link href="/winners" className={navLinkStyles}>Past winners</Link>
