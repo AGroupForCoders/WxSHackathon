@@ -1,9 +1,13 @@
+import { Button } from "@/components/primitives/Button";
 import ContentImage from "@/components/primitives/ContentImage";
 import React from "react";
 
 export default function Opportunity() {
   return (
     <section className="flex flex-col gap-48">
+      <h1 className="font-bold text-4xl text-center">
+        A unique weekend opportunity
+      </h1>
       <ContentImage
         image={<div className="w-[316px] h-[267px] bg-abbey-apricot-05" />}
       >
@@ -43,7 +47,10 @@ export default function Opportunity() {
           both lock in to your project and have casual yaps with new friends.
         </p>
       </ContentImage>
-      <div className="justify-center gap-6"></div>
+      <div className="flex justify-center gap-6">
+        <Button>Add to Calender</Button>
+        <Button variant={{ style: "secondary" }}>Some other button CTA</Button>
+      </div>
     </section>
   );
 }
