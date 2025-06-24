@@ -6,7 +6,7 @@ export default function Faqs() {
     <section className="flex flex-col text-center">
       <h1 className="font-bold text-4xl">Frequently asked questions</h1>
       <div className="flex flex-wrap">
-        <Faqdropdown question="????" />
+        <Faqdropdown question="????" answer="lol" />
       </div>
     </section>
   );
