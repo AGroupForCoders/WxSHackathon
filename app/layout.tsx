@@ -15,12 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <head>
         {/* Tbh idk how to get Adobe Fonts to work in app-router, so this is a janky <head> workaround */}
-        <link rel="stylesheet" href="https://use.typekit.net/inx8qlb.css"/>
+        <link rel="stylesheet" href="https://use.typekit.net/inx8qlb.css" />
       </head>
-      <body className={`antialiased bg-background text-foreground global-font-stack tracking-[-0.01em]`}>
+      <body
+        className={`antialiased bg-background text-foreground global-font-stack tracking-[-0.01em] text-lg`}
+      >
         <Navbar />
         {children}
         <Footer />
