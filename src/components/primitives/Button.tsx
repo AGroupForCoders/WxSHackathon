@@ -1,12 +1,31 @@
 "use client";
 
-import type { HTMLAttributes, ReactNode } from "react";
+import {HTMLAttributes, ReactNode, useState} from "react";
 import Link, { LinkProps } from "next/link";
 import { type VariantProps, tv } from "tailwind-variants";
 import { cn } from "@/utils/cn";
 
+import Arrow from "@/assets/svg/Arrow";
+import "./utils/LinkAnimations.css";
+
+/**
+ * General button component for navigation and click actions.
+ *
+ * Takes the following parameters as props of variants:
+ * @variation style [primary, secondary] - the general style and importance of the button, see Figma. Can add more as needed.
+ * @variation color [primary, wdcc, sesa] - the color of the button. Primary are general buttons, wdcc/sesa self explanatory.
+ * @variation width [full, fit] - whether the element scales to the full width of the parent.
+ * @variation arrow [true, false] - whether the button has a corresponding arrow.
+ *
+ * example usage:
+ * <Button variant={{ style: "primary", color: "wdcc", width: {full}, arrow: {true} }}>primary blue</Button>
+ *
+ * Labels are provided as children of this element.
+ * This Button dynamically determines its element type as either <button/> or <Link/> depending on the optional href attribute.
+ */
+
 const button = tv({
-  base: "flex items-center justify-center gap-2 rounded-full px-6 py-2 font-semibold whitespace-nowrap transition duration-200 hover:cursor-pointer transition",
+  base: "group flex items-center justify-center gap-2 rounded-full px-6 pt-[6px] pb-[8px] font-semibold whitespace-nowrap transition-all duration-[500ms] hover:gap-4 hover:duration-[300ms] hover:cursor-pointer",
   variants: {
     /* Realistically we probably don't need to codify the whole style/color variant split since there's so few buttons and basically no variants, but whatever.  */
     style: {
@@ -64,6 +83,7 @@ const button = tv({
 
 type CommonProps = {
   children: ReactNode;
+  arrow?: boolean;
 };
 
 type Variant = { variant?: VariantProps<typeof button> };
@@ -80,6 +100,13 @@ function isLinkProps(props: ButtonVersionProps | LinkVersionProps): props is Lin
 }
 
 function Button(props: ButtonVersionProps | LinkVersionProps) {
+
+  // Code exclusive to arrow
+  const [exitAnimation, setExitAnimation] = useState(false);
+
+  const ArrowStyle = exitAnimation ? "animate-[arrow-out_0.5s_forwards_ease-in-out]"
+    : "-rotate-45 group-hover:animate-[arrow-in_0.5s_forwards_ease-in-out]"
+
   // Conditionally render as Link or button depending on whether a local link (href attribute) is provided.
   if (isLinkProps(props)) {
     // Is Link (default to newTab if newTab undefined & href is external)
@@ -90,16 +117,23 @@ function Button(props: ButtonVersionProps | LinkVersionProps) {
         href={href}
         className={cn(button(props.variant), className)}
         target={newTab ? "_blank" : "_self"}
+        onMouseEnter={() => setExitAnimation(false)}
+        onMouseLeave={() => setExitAnimation(true)}
       >
         {children}
+        {props.arrow && <Arrow className={ArrowStyle}/>}
       </Link>
     );
   } else {
     // Is button
     const { children, className } = props;
     return (
-      <button {...props} className={cn(button(props.variant), className)}>
+      <button {...props}
+              className={cn(button(props.variant), className)}
+              onMouseEnter={() => setExitAnimation(false)}
+              onMouseLeave={() => setExitAnimation(true)}>
         {children}
+        {props.arrow && <Arrow className={ArrowStyle}/>}
       </button>
 
     );

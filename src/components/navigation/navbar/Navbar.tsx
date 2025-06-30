@@ -27,7 +27,7 @@ export default function Navbar(){
         <NavbarMobile
           className="md:hidden"
         />
-        <Button className="hidden md:flex" variant={{style: "secondary"}} href="https://www.youtube.com/watch?v=p7YXXieghto">Registration {"->"}</Button>
+        <Button className="hidden md:flex" variant={{style: "secondary"}} href="https://www.youtube.com/watch?v=p7YXXieghto" arrow={true}>Registration</Button>
       </div>
     </nav>
   )
