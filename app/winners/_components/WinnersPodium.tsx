@@ -11,7 +11,7 @@ export default function WinnersPodium() {
     <div className="flex flex-row items-end justify-center w-full gap-10">
       {/* Left podium */}
       <div className="flex flex-col items-center">
-        <PodiumStar color="#DAF1EB" className="z-10  mb-[-26px]" />
+        <PodiumStar color="#DAF1EB" className="z-10  mb-[-20px]" />
         <LeftPodium className="z-0" />
       </div>
       {/* Centre podium */}
