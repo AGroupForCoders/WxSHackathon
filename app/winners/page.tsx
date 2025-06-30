@@ -10,7 +10,7 @@ export default function PastWinnersPage() {
 
   return (
     <main className="min-h-screen">
-      <div className="my-24 h-128 flex flex-col items-center gap-y-10">
+      <div className="my-24 h-128 flex flex-col items-center gap-y-5  ">
         <h1 className="text-6xl font-bold text-center">Past winners</h1>
         <YearDropdown
           value={selectedYear}
