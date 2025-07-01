@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function AboutStats({...props}){
-  return(
+export default function AboutStats() {
+  return (
     <section className="py-12 flex flex-col w-full gap-12 justify-center items-center z-10">
       <h2 className="text-4xl font-bold tracking-tight leading-[40px] max-w-[500px] text-center">
         Build something{" "}
         <span className="bg-linear-to-br from-wdcc-blue-40 to-sesa-teal-40 bg-clip-text text-transparent pb-[10px]">
-              amazing
-            </span>{" "}
+          amazing
+        </span>{" "}
         with hundreds of new friends, and
       </h2>
 
@@ -16,7 +16,6 @@ export default function AboutStats({...props}){
           <p>placeholder for stats cubes</p>
         </div>
       </div>
-
     </section>
-  )
+  );
 }

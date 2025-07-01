@@ -1,73 +1,72 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/primitives/Button";
 import Image from "next/image";
-import { animate, createScope, Scope, eases, onScroll} from 'animejs';
+import { animate, createScope, Scope, eases, onScroll } from "animejs";
 
 import wdcc from "@/assets/image/WDCC-Dark.png";
 import sesa from "@/assets/image/SESA-Dark.png";
 import React from "react";
 
-import Skyline1 from "./visuals/Skyline1"
-import Skyline2 from "./visuals/Skyline2"
-import Skyline3 from "./visuals/Skyline3"
+import Skyline1 from "./visuals/Skyline1";
+import Skyline2 from "./visuals/Skyline2";
+import Skyline3 from "./visuals/Skyline3";
 
 export default function Hero() {
-
   const root = React.useRef(null);
   const scope = React.useRef<Scope>(null);
 
   React.useEffect(() => {
-    scope.current = createScope({root}).add(self => {
-
+    scope.current = createScope({ root }).add(() => {
       animate(".skyline1", {
-        y: ['0', '-350px'],
+        y: ["0", "-350px"],
         duration: 200,
         ease: eases.outQuad,
         autoplay: onScroll({
           container: ".scroll-container",
           sync: 1,
-          enter: 'bottom',
-          leave: 'top',
-          debug: false
-
-        })
+          enter: "bottom",
+          leave: "top",
+          debug: false,
+        }),
       });
       animate(".skyline2", {
-        y: ['-200px', '-850px'],
+        y: ["-200px", "-850px"],
         duration: 200,
         ease: eases.outQuad,
         autoplay: onScroll({
           container: ".scroll-container",
           sync: 1,
-          enter: 'bottom',
-          leave: 'top',
-          debug: false
-
-        })
+          enter: "bottom",
+          leave: "top",
+          debug: false,
+        }),
       });
       animate(".skyline3", {
-        y: ['-800px', '-950px'],
+        y: ["-800px", "-950px"],
         duration: 200,
         ease: eases.outQuad,
         autoplay: onScroll({
           container: ".scroll-container",
           sync: 1,
-          enter: 'bottom',
-          leave: 'top',
-          debug: false
-
-        })
+          enter: "bottom",
+          leave: "top",
+          debug: false,
+        }),
       });
     });
-    return() => {
-      if(scope.current){
+    return () => {
+      if (scope.current) {
         scope.current.revert();
       }
-    }  }, []);
+    };
+  }, []);
 
   return (
-    <section ref={root} className="scroll-container w-full min-h-screen responsive-fullwidth">
+    <section
+      ref={root}
+      className="scroll-container w-full min-h-screen responsive-fullwidth"
+    >
       <div className="grid place-items-center py-48">
         <div className="max-w-[700px] flex flex-col gap-6 mr-[-20%] pb-24">
           <div className="flex flex-col gap-4">
@@ -80,8 +79,8 @@ export default function Hero() {
             <h1 className="text-6xl font-bold tracking-tight leading-[62px]">
               The{" "}
               <span className="bg-linear-to-br from-wdcc-blue-40 to-sesa-teal-40 bg-clip-text text-transparent pb-[10px]">
-              biggest
-            </span>{" "}
+                biggest
+              </span>{" "}
               tertiary hackathon in New Zealand
             </h1>
           </div>
