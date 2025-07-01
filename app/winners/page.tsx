@@ -29,8 +29,14 @@ export default function PastWinnersPage() {
           options={years}
           onChange={setSelectedYear}
         />
-        <WinnersPodium orderedWinners={dataForSelectedYear.orderedWinners} />
-        <SpecialAwards specialAwards={dataForSelectedYear.specialAwards} />
+        <WinnersPodium
+          orderedWinners={dataForSelectedYear.orderedWinners}
+          year={selectedYear}
+        />
+        <SpecialAwards
+          specialAwards={dataForSelectedYear.specialAwards}
+          year={selectedYear}
+        />
       </div>
     </main>
   );
