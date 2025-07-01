@@ -14,7 +14,7 @@ export default function SpecialAwards({
       {specialAwards.map((award) => (
         <div
           key={award.place + award.teamName}
-          className="bg-gray-10 rounded p-2 flex flex-col gap-2"
+          className="bg-gray-10 rounded py-2 px-5 flex flex-col"
         >
           <h3 className="font-bold">{award.place}</h3>
           <Link
