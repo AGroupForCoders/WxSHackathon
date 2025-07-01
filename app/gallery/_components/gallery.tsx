@@ -5,6 +5,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/primitives/Button";
 import { motion, AnimatePresence, easeInOut } from "motion/react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 export default function Gallery() {
   //indexes were wrong or smth
@@ -14,6 +16,20 @@ export default function Gallery() {
   const currentYearData = orderedGalleryPhotos[currentYearIndex];
   const currentYear = currentYearData.photos[0]?.year;
   const currentImages = currentYearData.photos.map((photo) => photo.image);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const lightboxSlides = currentImages.map((image, index) => ({
+    src: image,
+    alt: `Gallery ${currentYear} - Image ${index + 1}`,
+    width: 1200,
+    height: 800,
+  }));
+
+  const openLightbox = (imageIndex: number) => {
+    setLightboxIndex(imageIndex);
+    setLightboxOpen(true);
+  };
 
   const distributeImagesIntoColumns = (images: string[]) => {
     const columns: string[][] = [[], [], [], []];
@@ -94,7 +110,7 @@ export default function Gallery() {
                 const imageName = getImageName(imagePath);
 
                 return (
-                  <div key={imageKey}>
+                  <div key={imageKey} onClick={() => openLightbox(columns.indexOf(column) * 4 + column.indexOf(imagePath))}>
                     <Image
                       className="h-auto max-w-full rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                       src={imagePath}
@@ -110,6 +126,17 @@ export default function Gallery() {
           ))}
         </motion.div>
       </AnimatePresence>
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        index={lightboxIndex}
+        slides={lightboxSlides}
+        carousel={{ finite: false }}
+        render={{
+          buttonPrev: lightboxSlides.length <= 1 ? () => null : undefined,
+          buttonNext: lightboxSlides.length <= 1 ? () => null : undefined,
+        }}
+      />
     </div>
   );
 }
