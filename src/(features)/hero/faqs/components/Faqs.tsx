@@ -1,5 +1,5 @@
 import React from "react";
-import Faqdropdown from "./Faqdropdown";
+import { Faqdropdown } from "./Faqdropdown";
 
 export default function Faqs() {
   return (

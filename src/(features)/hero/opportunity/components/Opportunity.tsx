@@ -2,7 +2,7 @@ import { Button } from "@/components/primitives/Button";
 import ContentImage from "@/components/primitives/ContentImage";
 import React from "react";
 
-export default function Opportunity() {
+export function Opportunity() {
   return (
     <section className="flex flex-col gap-48">
       <h1 className="font-bold text-4xl text-center">

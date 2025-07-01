@@ -6,7 +6,8 @@ interface FaqdropdownProps {
   question: string;
   answer: string;
 }
-export default function Faqdropdown({ question, answer }: FaqdropdownProps) {
+
+export function Faqdropdown({ question, answer }: FaqdropdownProps) {
   const [toggled, setToggled] = useState<boolean>(false);
 
   function handleToggle() {
