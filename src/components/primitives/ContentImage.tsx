@@ -29,7 +29,7 @@ export default function ContentImage({
   imgFirst = false,
 }: DuoProps) {
   return (
-    <div className="flex flex-col items-center justify-center gap-x-48 gap-y-8 lg:flex-row">
+    <div className="flex flex-col items-center justify-center gap-x-12 gap-y-8 lg:flex-row">
       <div
         className={cn(
           "order-2 flex w-full flex-1 flex-col gap-y-6",
