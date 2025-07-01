@@ -60,7 +60,9 @@ export const RightPodium = (props: SVGAttributes<SVGSVGElement>) => (
 );
 
 // Podium Star (with prop for changing color)
-type PodiumStarProps = SVGAttributes<SVGSVGElement> & { color?: string };
+interface PodiumStarProps extends SVGAttributes<SVGSVGElement> {
+  color?: string;
+}
 export const PodiumStar = ({
   color = "#FFF2CC",
   ...props

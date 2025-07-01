@@ -3,10 +3,22 @@ import WinnersPodium from "./_components/WinnersPodium";
 import { useState } from "react";
 import YearDropdown from "./_components/YearDropdown";
 import SpecialAwards from "./_components/SpecialAwards";
+import { pastWinners } from "./_data/pastWinners";
+import { PastWinners } from "@/types/WinnerType";
 
 export default function PastWinnersPage() {
   const [selectedYear, setSelectedYear] = useState("2024");
   const years = ["2024", "2023", "2022", "2021"];
+
+  const dataForSelectedYear: PastWinners | undefined = pastWinners.find(
+    (entry) => entry.year.toString() === selectedYear
+  );
+
+  if (!dataForSelectedYear) {
+    return (
+      <div className="text-center mt-10">No data found for this year.</div>
+    );
+  }
 
   return (
     <main className="min-h-screen">
@@ -17,8 +29,8 @@ export default function PastWinnersPage() {
           options={years}
           onChange={setSelectedYear}
         />
-        <WinnersPodium />
-        <SpecialAwards />
+        <WinnersPodium orderedWinners={dataForSelectedYear.orderedWinners} />
+        <SpecialAwards specialAwards={dataForSelectedYear.specialAwards} />
       </div>
     </main>
   );
