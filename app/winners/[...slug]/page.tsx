@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { pastWinners } from "../_data/pastWinners";
 import { slugify } from "@/utils/slugify";
 import { PastWinners, Winner } from "@/types/WinnerType";
-import TeamCard from "./_components/IndividualWinner";
 import IndividualWinner from "./_components/IndividualWinner";
 
 export default async function TeamDetails({
@@ -14,6 +13,7 @@ export default async function TeamDetails({
   if (!slug || slug.length !== 2) return notFound();
 
   const [year, teamSlug] = slug;
+  const decodedSlug = decodeURIComponent(teamSlug);
 
   const yearToIndex: Record<string, number> = {
     "2024": 0,
@@ -27,7 +27,7 @@ export default async function TeamDetails({
   const data: PastWinners = pastWinners[yearIndex];
   const allWinners: Winner[] = [...data.orderedWinners, ...data.specialAwards];
 
-  const winner = allWinners.find((w) => slugify(w.teamName) === teamSlug);
+  const winner = allWinners.find((w) => slugify(w.teamName) === decodedSlug);
   if (!winner) return notFound();
 
   const placeBgMap: Record<string, string> = {
@@ -36,7 +36,6 @@ export default async function TeamDetails({
     "3rd Place": "andrew-amethyst-10",
   };
   const bgColorClass = placeBgMap[winner.place] || "gray-10";
-  console.log(bgColorClass);
 
   return (
     <>
