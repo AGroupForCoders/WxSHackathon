@@ -1,4 +1,4 @@
-import { GalleryPhotos } from "@/types/PhotoTypes";
+import { GalleryPhotos } from "@/(features)/gallery";
 
 export const galleryPhotos2024: GalleryPhotos = {
   photos: [
