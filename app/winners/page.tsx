@@ -6,8 +6,8 @@ import {
   YearDropdown,
   SpecialAwards,
   WinnersPodium,
+  PastWinners,
 } from "@/(features)/winners";
-import { PastWinners } from "@/(features)/winners";
 
 export default function PastWinnersPage() {
   const [selectedYear, setSelectedYear] = useState("2024");
