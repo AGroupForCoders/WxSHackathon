@@ -1,6 +1,6 @@
 "use client";
 
-import { galleryPhotos } from "../gallery-photos/galleryPhotos";
+import { galleryPhotos } from "../data/gallery-photos/galleryPhotos";
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/primitives/Button";
@@ -110,7 +110,14 @@ export default function Gallery() {
                 const imageName = getImageName(imagePath);
 
                 return (
-                  <div key={imageKey} onClick={() => openLightbox(columns.indexOf(column) * 4 + column.indexOf(imagePath))}>
+                  <div
+                    key={imageKey}
+                    onClick={() =>
+                      openLightbox(
+                        columns.indexOf(column) * 4 + column.indexOf(imagePath)
+                      )
+                    }
+                  >
                     <Image
                       className="h-auto max-w-full rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                       src={imagePath}

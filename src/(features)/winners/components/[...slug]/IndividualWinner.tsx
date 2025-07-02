@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Winner } from "@/types/WinnerType";
+import { Winner } from "@/(features)/winners";
 
 interface IndividualWinnerProps {
   winner: Winner;

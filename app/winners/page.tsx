@@ -1,10 +1,13 @@
 "use client";
-import WinnersPodium from "./_components/WinnersPodium";
+
 import { useState } from "react";
-import YearDropdown from "./_components/YearDropdown";
-import SpecialAwards from "./_components/SpecialAwards";
-import { pastWinners } from "./_data/pastWinners";
-import { PastWinners } from "@/types/WinnerType";
+import {
+  pastWinners,
+  YearDropdown,
+  SpecialAwards,
+  WinnersPodium,
+} from "@/(features)/winners";
+import { PastWinners } from "@/(features)/winners";
 
 export default function PastWinnersPage() {
   const [selectedYear, setSelectedYear] = useState("2024");

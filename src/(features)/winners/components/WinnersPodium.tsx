@@ -4,7 +4,7 @@ import {
   RightPodium,
   PodiumStar,
 } from "@/assets/svg/winners/Podiums";
-import { Winner } from "@/types/WinnerType";
+import { Winner } from "@/(features)/winners";
 import Link from "next/link";
 import { slugify } from "@/utils/slugify";
 
