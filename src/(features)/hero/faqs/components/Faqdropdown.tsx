@@ -16,9 +16,12 @@ export function Faqdropdown({ question, answer }: FaqdropdownProps) {
   }
 
   return (
-    <div className="flex w-[448px] cursor-pointer flex-col justify-center">
-      <div onClick={handleToggle} className="flex items-center gap-4">
-        <p>{question}</p>
+    <div className="flex w-full cursor-pointer flex-col justify-center">
+      <div
+        onClick={handleToggle}
+        className="flex items-center gap-4 justify-between"
+      >
+        <h6 className="font-bold text-xl">{question}</h6>
         <motion.span
           animate={{ rotate: toggled ? 180 : 0 }}
           transition={{ duration: 0.3 }}
@@ -40,7 +43,7 @@ export function Faqdropdown({ question, answer }: FaqdropdownProps) {
             style={{ overflow: "hidden" }}
           >
             <div className="pt-2">
-              <p>{answer}</p>
+              <p className="text-left">{answer}</p>
             </div>
           </motion.div>
         )}
