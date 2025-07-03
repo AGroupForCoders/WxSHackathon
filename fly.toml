@@ -5,6 +5,8 @@
 
 app = 'wxshackathon'
 primary_region = 'syd'
+swap_size_mb = 512
+
 
 [build]
 
@@ -17,4 +19,6 @@ primary_region = 'syd'
   processes = ['app']
 
 [[vm]]
-  size = 'shared-cpu-1x'
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
