@@ -8,26 +8,38 @@ export default function OrganisersPage() {
           <OrganisersCard
             className="bottom-0 left-1/2 -translate-x-1/2 z-50"
             backgroundColor="wdccsesa"
+            imagesrc="/organisers/Oorja.jpg"
+            alttext="Oorja from SESA"
           />
           <OrganisersCard
             className="bottom-95 left-1/2 -translate-x-1/2 z-40"
             backgroundColor="wdccsesa"
+            imagesrc="/organisers/Oorja.jpg"
+            alttext="Oorja from SESA"
           />
           <OrganisersCard
             className="right-8 top-15 rotate-[4.5deg] z-30"
             backgroundColor="wdcc"
+            imagesrc="/organisers/Oorja.jpg"
+            alttext="Oorja from SESA"
           />
           <OrganisersCard
             className="right-5 bottom-30 rotate-[9deg] z-40"
             backgroundColor="wdcc"
+            imagesrc="/organisers/Oorja.jpg"
+            alttext="Oorja from SESA"
           />
           <OrganisersCard
             className="left-8 top-15 -rotate-[4.5deg] z-30"
             backgroundColor="sesa"
+            imagesrc="/organisers/Oorja.jpg"
+            alttext="Oorja from SESA"
           />
           <OrganisersCard
             className="left-5 bottom-30 -rotate-[9deg] z-40"
             backgroundColor="sesa"
+            imagesrc="/organisers/Oorja.jpg"
+            alttext="Oorja from SESA"
           />
         </div>
       </div>
