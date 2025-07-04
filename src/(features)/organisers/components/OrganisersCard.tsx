@@ -8,8 +8,7 @@ const organiserscard = tv({
     backgroundColor: {
       wdcc: "bg-wdcc-blue-50",
       sesa: "bg-sesa-teal-50",
-      //to do make gradient
-      wdccsesa: "",
+      wdccsesa: "bg-gradient-to-r from-sesa-teal-50 to-wdcc-blue-50",
     },
   },
   defaultVariants: {
