@@ -1,0 +1,1 @@
+export {OrganisersCard} from './components/OrganisersCard';
