@@ -1,7 +1,5 @@
 import { Button } from "@/components/primitives/Button";
 import React from "react";
-import Arrow from "@/assets/svg/Arrow";
-import { ReactNode } from "react";
 
 interface SeeMoreCardProps {
   label: string;
