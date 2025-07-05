@@ -8,28 +8,39 @@ type SponsorCardProps = {
   href?: string;
 };
 
-const tierWidth: Record<Sponsor["type"], number> = {
-  tech: 250,
-  food: 150,
+const tierImageSize: Record<
+  Sponsor["type"],
+  { width: number; height: number }
+> = {
+  tech: { width: 250, height: 100 },
+  food: { width: 150, height: 80 },
 };
 
-const tierHeight: Record<Sponsor["type"], number> = {
-  tech: 100,
-  food: 80,
+const tierContainerSize: Record<
+  Sponsor["type"],
+  { width: number; height: number }
+> = {
+  tech: { width: 300, height: 120 },
+  food: { width: 200, height: 100 },
 };
 
 const SponsorCard = ({ tier, src, alt, href }: SponsorCardProps) => {
-  const width = tierWidth[tier];
-  const height = tierHeight[tier];
+  const { width, height } = tierImageSize[tier];
+  const { width: boxWidth, height: boxHeight } = tierContainerSize[tier];
 
   const image = (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className="drop-shadow-[0px_0px_8px_var(--background)] object-contain"
-    />
+    <div
+      className="flex items-center justify-center"
+      style={{ width: boxWidth, height: boxHeight }}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="object-contain drop-shadow-[0px_0px_8px_var(--background)]"
+      />
+    </div>
   );
 
   return href ? (
