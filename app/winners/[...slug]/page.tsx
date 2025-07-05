@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { pastWinners, PastWinners, Winner } from "@/(features)/winners";
 import { slugify } from "@/utils/slugify";
-import IndividualWinner from "../../../src/(features)/winners/components/[...slug]/IndividualWinner";
-import PlaceTag from "@/(features)/winners/components/[...slug]/PlaceTag";
+import { IndividualWinner } from "@/(features)/winners";
+import { PlaceTag } from "@/(features)/winners";
 
 export default async function TeamDetails({
   params,
