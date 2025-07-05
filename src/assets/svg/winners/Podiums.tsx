@@ -24,39 +24,73 @@ export const CentrePodium = (props: SVGAttributes<SVGSVGElement>) => (
 
 // Left Podium
 export const LeftPodium = (props: SVGAttributes<SVGSVGElement>) => (
-  <svg
-    width="322"
-    height="234"
-    viewBox="0 0 322 234"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <rect
-      width="290"
-      height="215.897"
-      transform="matrix(-1 0 0 1 290 18.1031)"
-      fill="#CEE6FD"
-    />
-    <path d="M322 0L291 18.1032H0L36.5 0H322Z" fill="#B0D6F9" />
-    <path d="M290 18.1032L322 0V216.567L290 234V18.1032Z" fill="#DCECFA" />
-  </svg>
+  <>
+    <div className="block lg:hidden">
+      <svg
+        width="323"
+        height="215"
+        viewBox="0 0 323 215"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+      >
+        <path d="M0 41H323V214.5H0V41Z" fill="#CEE6FD" />
+        <path d="M65 0L1 42H322L265.5 0H65Z" fill="#B0D6F9" />
+      </svg>
+    </div>
+
+    <div className="hidden lg:block">
+      <svg
+        width="322"
+        height="234"
+        viewBox="0 0 322 234"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+      >
+        <rect
+          width="290"
+          height="215.897"
+          transform="matrix(-1 0 0 1 290 18.1031)"
+          fill="#CEE6FD"
+        />
+        <path d="M322 0L291 18.1032H0L36.5 0H322Z" fill="#B0D6F9" />
+        <path d="M290 18.1032L322 0V216.567L290 234V18.1032Z" fill="#DCECFA" />
+      </svg>
+    </div>
+  </>
 );
 
 // Right Podium
 export const RightPodium = (props: SVGAttributes<SVGSVGElement>) => (
-  <svg
-    width="322"
-    height="349"
-    viewBox="0 0 322 349"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <rect x="32" y="27" width="290" height="322" fill="#CEE6FD" />
-    <path d="M0 0L31 27H322L285.5 0H0Z" fill="#B0D6F9" />
-    <path d="M32 27L0 0V323L32 349V27Z" fill="#DCECFA" />
-  </svg>
+  <>
+    <div className="block lg:hidden">
+      <svg
+        width="323"
+        height="349"
+        viewBox="0 0 323 349"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect y="41" width="323" height="308" fill="#CEE6FD" />
+        <path d="M65 0L1 42H322L265.5 0H65Z" fill="#B0D6F9" />
+      </svg>
+    </div>
+    <div className="hidden lg:block">
+      <svg
+        width="322"
+        height="349"
+        viewBox="0 0 322 349"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+      >
+        <rect x="32" y="27" width="290" height="322" fill="#CEE6FD" />
+        <path d="M0 0L31 27H322L285.5 0H0Z" fill="#B0D6F9" />
+        <path d="M32 27L0 0V323L32 349V27Z" fill="#DCECFA" />
+      </svg>
+    </div>
+  </>
 );
 
 // Podium Star (with prop for changing color)
