@@ -23,10 +23,10 @@ export const foodSponsors: Sponsor[] = [
     imageAlt: "atlassian logo",
   },
   {
-    name: "Indomie",
+    name: "Red Bull",
     type: "food",
     websiteLink: "",
-    image: "/sponsors/indomie.png",
+    image: "/sponsors/red-bull.png",
     imageAlt: "atlassian logo",
   },
   {
@@ -37,10 +37,10 @@ export const foodSponsors: Sponsor[] = [
     imageAlt: "atlassian logo",
   },
   {
-    name: "Indomie",
+    name: "Red Bull",
     type: "food",
     websiteLink: "",
-    image: "/sponsors/indomie.png",
+    image: "/sponsors/red-bull.png",
     imageAlt: "atlassian logo",
   },
   {

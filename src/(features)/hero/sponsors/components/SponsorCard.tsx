@@ -8,6 +8,7 @@ type SponsorCardProps = {
   href?: string;
 };
 
+// change image and container size when we get finalised sponsor list and tiers
 const tierImageSize: Record<
   Sponsor["type"],
   { width: number; height: number }
