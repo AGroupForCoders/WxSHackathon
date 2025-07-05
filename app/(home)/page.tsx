@@ -4,6 +4,7 @@ import { Opportunity } from "@/(features)/hero/opportunity";
 import { Sponsors } from "@/(features)/hero/sponsors";
 import { AboutStats, About } from "@/(features)/hero";
 import AboutGallery from "@/(features)/hero/components/visuals/AboutGallery";
+import {SeeMore} from "@/(features)/hero/more";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
             <Opportunity />
             <FaqsSection />
             <Sponsors />
+            <SeeMore />
           </div>
         </div>
       </div>
