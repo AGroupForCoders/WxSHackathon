@@ -1,19 +1,14 @@
 import React from "react";
+import { techSponsors } from "../data/techSponsors";
+import { foodSponsors } from "../data/foodSponsors";
+import { SponsorTier } from "./SponsorTier";
 
 export function Sponsors() {
   return (
-    <section className="flex flex-col gap-16">
+    <section className="flex flex-col items-center justify-center gap-y-16">
       <h1 className="text-4xl font-bold text-center">Sponsors</h1>
-      <div className="flex flex-col">
-        <h2 className="font-bold text-2xl text-accent-wdcc text-center">
-          Tech Sponsors
-        </h2>
-        <div></div>
-      </div>
-      <div className="font-bold text-2xl text-accent-sesa text-center">
-        <h2>Tech Sponsors</h2>
-        <div></div>
-      </div>
+      <SponsorTier title="Tech Sponsors" sponsors={techSponsors} type="tech" />
+      <SponsorTier title="Food Sponsors" sponsors={foodSponsors} type="food" />
     </section>
   );
 }

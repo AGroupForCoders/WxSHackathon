@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { pastWinners, PastWinners, Winner } from "@/(features)/winners";
 import { slugify } from "@/utils/slugify";
-import IndividualWinner from "../../../src/(features)/winners/components/[...slug]/IndividualWinner";
+import { IndividualWinner } from "@/(features)/winners";
+import { PlaceTag } from "@/(features)/winners";
 
 export default async function TeamDetails({
   params,
@@ -29,22 +30,13 @@ export default async function TeamDetails({
   const winner = allWinners.find((w) => slugify(w.teamName) === decodedSlug);
   if (!winner) return notFound();
 
-  const placeBgMap: Record<string, string> = {
-    "1st Place": "yoyo-yellow-10",
-    "2nd Place": "sesa-teal-10",
-    "3rd Place": "andrew-amethyst-10",
-  };
-  const bgColorClass = placeBgMap[winner.place] || "gray-10";
-
   return (
     <>
       <main className="min-h-screen">
         <div className="my-24 h-128 flex flex-col items-center gap-y-5 ">
           <h1 className="text-5xl font-bold">{winner.teamName}</h1>
           <div className="flex flex-row gap-2">
-            <p className={`border rounded-3xl py-1 px-4 bg-${bgColorClass}`}>
-              {winner.place}
-            </p>
+            <PlaceTag placing={winner.place} />
             <p className="border rounded-3xl py-1 px-4">{year}</p>
           </div>
 
